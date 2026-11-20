@@ -1,0 +1,750 @@
+# Mloun Side Contact - Chinese (China) translation.
+# Copyright (C) 2026 Mloun
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mloun Side Contact 1.4.36\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone/\n"
+"POT-Creation-Date: 2026-10-25 00:00+0800\n"
+"PO-Revision-Date: 2026-10-25 00:00+0800\n"
+"Last-Translator: Mloun <sales@mloun.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone\n"
+
+#: mloun-side-contact.php
+msgid "Small"
+msgstr "小"
+
+#: mloun-side-contact.php
+msgid "Medium"
+msgstr "中"
+
+#: mloun-side-contact.php
+msgid "Large"
+msgstr "大"
+
+#: mloun-side-contact.php
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: mloun-side-contact.php
+msgid "Digits only, no + or spaces. Example: 8613800000000"
+msgstr "只填数字，不要加 + 或空格。例如：8613800000000"
+
+#: mloun-side-contact.php
+msgid "Telegram"
+msgstr "Telegram"
+
+#: mloun-side-contact.php
+msgid "Your Telegram username, without the @."
+msgstr "你的 Telegram 用户名，不带 @。"
+
+#: mloun-side-contact.php
+msgid "Phone Call"
+msgstr "电话拨打"
+
+#: mloun-side-contact.php
+msgid "Visitors tap the button to call this number."
+msgstr "访客点击按钮即拨打此号码。"
+
+#: mloun-side-contact.php
+msgid "SMS"
+msgstr "短信"
+
+#: mloun-side-contact.php
+msgid "Opens the visitor SMS app with this number."
+msgstr "打开访客的短信应用并填入此号码。"
+
+#: mloun-side-contact.php
+msgid "Email"
+msgstr "邮箱"
+
+#: mloun-side-contact.php
+msgid "Opens the visitor email app."
+msgstr "打开访客的邮件应用。"
+
+#: mloun-side-contact.php
+msgid "Messenger"
+msgstr "Messenger"
+
+#: mloun-side-contact.php
+msgid "Your Facebook Page username."
+msgstr "你的 Facebook 主页用户名。"
+
+#: mloun-side-contact.php
+msgid "Instagram"
+msgstr "Instagram"
+
+#: mloun-side-contact.php
+msgid "Your Instagram username, without the @."
+msgstr "你的 Instagram 用户名，不带 @。"
+
+#: mloun-side-contact.php
+msgid "Facebook"
+msgstr "Facebook"
+
+#: mloun-side-contact.php
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: mloun-side-contact.php
+msgid "Profile slug after /in/. For a company page, paste the full URL instead."
+msgstr "填写 /in/ 之后的个人主页别名。如果是公司主页，请直接粘贴完整网址。"
+
+#: mloun-side-contact.php
+msgid "X (Twitter)"
+msgstr "X (Twitter)"
+
+#: mloun-side-contact.php
+msgid "Your X username, without the @."
+msgstr "你的 X 用户名，不带 @。"
+
+#: mloun-side-contact.php
+msgid "YouTube"
+msgstr "YouTube"
+
+#: mloun-side-contact.php
+msgid "Channel handle after @. For a legacy /c/ or /channel/ URL, paste the full URL instead."
+msgstr "填写 @ 之后的频道名称。如果是旧版 /c/ 或 /channel/ 网址，请直接粘贴完整网址。"
+
+#: mloun-side-contact.php
+msgid "TikTok"
+msgstr "TikTok"
+
+#: mloun-side-contact.php
+msgid "Your TikTok username, without the @."
+msgstr "你的 TikTok 用户名，不带 @。"
+
+#: mloun-side-contact.php
+msgid "Line"
+msgstr "Line"
+
+#: mloun-side-contact.php
+msgid "Your Line ID."
+msgstr "你的 Line ID。"
+
+#: mloun-side-contact.php
+msgid "Viber"
+msgstr "Viber"
+
+#: mloun-side-contact.php
+msgid "Full international number, digits only."
+msgstr "完整国际号码，只填数字。"
+
+#: mloun-side-contact.php
+msgid "Skype"
+msgstr "Skype"
+
+#: mloun-side-contact.php
+msgid "Your Skype ID."
+msgstr "你的 Skype ID。"
+
+#: mloun-side-contact.php
+msgid "Microsoft Teams"
+msgstr "Microsoft Teams"
+
+#: mloun-side-contact.php
+msgid "The email you sign in to Microsoft Teams with. Visitors open a chat with you."
+msgstr "填写你登录 Microsoft Teams 的邮箱，访客将通过它与你发起聊天。"
+
+#: mloun-side-contact.php
+msgid "Zalo"
+msgstr "Zalo"
+
+#: mloun-side-contact.php
+msgid "Your Zalo phone number, digits only."
+msgstr "你的 Zalo 电话号码，只填数字。"
+
+#: mloun-side-contact.php
+msgid "QQ"
+msgstr "QQ"
+
+#: mloun-side-contact.php
+msgid "Your QQ number."
+msgstr "你的 QQ 号。"
+
+#: mloun-side-contact.php
+msgid "WeChat"
+msgstr "微信"
+
+#: mloun-side-contact.php
+msgid "WeChat cannot be opened by a link. Upload your WeChat QR code below and visitors scan it."
+msgstr "微信无法通过链接直接打开。请在下方上传你的微信二维码，访客扫码添加。"
+
+#: mloun-side-contact.php
+msgid "Location"
+msgstr "地址"
+
+#: mloun-side-contact.php
+msgid "An address opens Google Maps. A full URL is used as-is."
+msgstr "填写地址会打开谷歌地图。填写完整网址则直接使用该网址。"
+
+#: mloun-side-contact.php
+msgid "Custom Link"
+msgstr "自定义链接"
+
+#: mloun-side-contact.php
+msgid "Paste any URL. Click the tile again to add more than one custom link."
+msgstr "粘贴任意网址。再次点击该图块可以添加多个自定义链接。"
+
+#: mloun-side-contact.php
+msgid "Back to Top"
+msgstr "回到顶部"
+
+#: mloun-side-contact.php
+msgid "Always sits at the bottom of the bar. Hidden until the visitor scrolls past 20% of the page, then it fades in; clicking it scrolls smoothly to the top and it hides again."
+msgstr "始终位于悬浮栏最下方。访客下滑超过页面 20% 后淡入显示；点击后平滑回到顶部，并自动隐藏。"
+
+#: mloun-side-contact.php
+msgid "Mloun Side Contact"
+msgstr "Mloun 侧边联系"
+
+#: mloun-side-contact.php
+msgid "Side Contact"
+msgstr "侧边联系"
+
+#: mloun-side-contact.php
+msgid "Settings"
+msgstr "设置"
+
+#: mloun-side-contact.php
+msgid "Choose image"
+msgstr "选择图片"
+
+#: mloun-side-contact.php
+msgid "Use this image"
+msgstr "使用这张图片"
+
+#: mloun-side-contact.php
+msgid "Remove image"
+msgstr "移除图片"
+
+#: mloun-side-contact.php
+msgid "Preview could not be updated."
+msgstr "预览更新失败。"
+
+#: mloun-side-contact.php
+msgid "Preview returned no markup. Open the browser console for details."
+msgstr "预览没有返回内容，请打开浏览器控制台查看原因。"
+
+#: mloun-side-contact.php
+msgid "Hidden on phones: the \"Hide on mobile\" option is on."
+msgstr "手机端已隐藏：后台开启了\"手机端隐藏\"。"
+
+#: mloun-side-contact.php
+msgid "Add a channel to see the preview."
+msgstr "添加一个频道后即可预览。"
+
+#: mloun-side-contact.php
+msgid "Not allowed."
+msgstr "没有权限。"
+
+#: mloun-side-contact.php
+msgid "Preview payload too large."
+msgstr "预览数据过大。"
+
+#: mloun-side-contact.php
+msgid "Remove"
+msgstr "移除"
+
+#: mloun-side-contact.php
+msgid "Nothing to fill in here. This button only scrolls the page back to the top."
+msgstr "此处无需填写。该按钮仅用于将页面滚动回顶部。"
+
+#: mloun-side-contact.php
+msgid "Country Code"
+msgstr "国家代码"
+
+#: mloun-side-contact.php
+msgid "Other"
+msgstr "其他"
+
+#: mloun-side-contact.php
+msgid "Phone Number"
+msgstr "电话号码"
+
+#: mloun-side-contact.php
+msgid "Email Address"
+msgstr "邮箱地址"
+
+#: mloun-side-contact.php
+msgid "Link URL"
+msgstr "链接地址"
+
+#: mloun-side-contact.php
+msgid "QR Code Image"
+msgstr "二维码图片"
+
+#: mloun-side-contact.php
+msgid "Account"
+msgstr "账号"
+
+#: mloun-side-contact.php
+msgid "On Hover Text"
+msgstr "悬停文字"
+
+#: mloun-side-contact.php
+msgid "Icon Color"
+msgstr "图标颜色"
+
+#: mloun-side-contact.php
+msgid "Hover Color"
+msgstr "悬停颜色"
+
+#: mloun-side-contact.php
+msgid "Open in New Window"
+msgstr "新窗口打开"
+
+#: mloun-side-contact.php
+msgid "Prefilled Message"
+msgstr "预填消息"
+
+#: mloun-side-contact.php
+msgid "Hello! I am interested in your products. Please send me a quote."
+msgstr "你好！我对你们的产品感兴趣，请给我一份报价。"
+
+#: mloun-side-contact.php
+msgid "Visitors open the chat with this message already typed. Leave blank to disable."
+msgstr "访客打开聊天时已自动填入这句话。留空则关闭此功能。"
+
+#: mloun-side-contact.php
+msgid "Advanced"
+msgstr "高级设置"
+
+#: mloun-side-contact.php
+msgid "Optional. Shows a QR code when visitors hover the button."
+msgstr "可选。访客悬停按钮时显示二维码。"
+
+#: mloun-side-contact.php
+msgid "Custom Icon"
+msgstr "自定义图标"
+
+#: mloun-side-contact.php
+msgid "Optional. Replaces the channel icon with your own image."
+msgstr "可选。用你自己的图片替换频道图标。"
+
+#: mloun-side-contact.php
+msgid "Show on"
+msgstr "显示于"
+
+#: mloun-side-contact.php
+msgid "Desktop"
+msgstr "电脑端"
+
+#: mloun-side-contact.php
+msgid "Mobile"
+msgstr "手机端"
+
+#: mloun-side-contact.php
+msgid "Both are on by default. Uncheck a device to hide this channel there."
+msgstr "默认两端都显示。取消勾选即可在该设备上隐藏此频道。"
+
+#: mloun-side-contact.php
+msgid "Link Override"
+msgstr "链接覆盖"
+
+#: mloun-side-contact.php
+msgid "Overrides the auto-generated link. Accepts a URL, an anchor like #open-chat, or javascript:void(SomeWidget.toggle())."
+msgstr "覆盖自动生成的链接。支持网址、锚点（如 #open-chat）或 javascript:void(SomeWidget.toggle()) 形式。"
+
+#: mloun-side-contact.php
+msgid "Custom CSS Class"
+msgstr "自定义 CSS 类名"
+
+#: mloun-side-contact.php
+msgid "Added to the button link, so you can target it from your own CSS or JS."
+msgstr "会添加到按钮链接上，方便你用自定义 CSS 或 JS 定位它。"
+
+#: mloun-side-contact.php
+msgid "Add another %s"
+msgstr "再添加一个%s"
+
+#: mloun-side-contact.php
+msgid "Upload / Select image"
+msgstr "上传 / 选择图片"
+
+#: mloun-side-contact.php
+msgid "Not shown: no channels selected"
+msgstr "未显示：还没有选择任何频道"
+
+#: mloun-side-contact.php
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+#: mloun-side-contact.php
+msgid "Setup steps"
+msgstr "设置步骤"
+
+#: mloun-side-contact.php
+msgid "Select channels"
+msgstr "选择频道"
+
+#: mloun-side-contact.php
+msgid "Widget customization"
+msgstr "组件设置"
+
+#: mloun-side-contact.php
+msgid "Step 1: Choose your channels"
+msgstr "第 1 步：选择频道"
+
+#: mloun-side-contact.php
+msgid "Click a channel to add it. You only fill in your number or username — the plugin builds the correct link for you, so nothing can be mistyped."
+msgstr "点击频道即可添加。你只需填写号码或用户名，插件会自动生成正确的链接，避免填错。"
+
+#: mloun-side-contact.php
+msgid "click again to add another"
+msgstr "再次点击可再添加一个"
+
+#: mloun-side-contact.php
+msgid "Tiles marked with + can be added more than once — click again for another button. Custom Link works this way."
+msgstr "带 + 标记的图块可以重复添加 —— 再次点击就会多出一个按钮，Custom Link 即为此类。"
+
+#: mloun-side-contact.php
+msgid "The dashed tile (Back to Top) is a page button, not a chat channel — it appears in the bottom corner once visitors scroll past 20% of the page."
+msgstr "虚线磁贴（返回顶部）是页面按钮而非聊天频道——访客下滑超过页面 20% 后会出现在悬浮栏底部。"
+
+#: mloun-side-contact.php
+msgid "Your channels"
+msgstr "你的频道"
+
+#: mloun-side-contact.php
+msgid "No channels yet — pick one above to get started."
+msgstr "还没有频道，点击上方的频道开始添加。"
+
+#: mloun-side-contact.php
+msgid "Continue to widget customization"
+msgstr "继续设置组件"
+
+#: mloun-side-contact.php
+msgid "Step 2: Widget customization"
+msgstr "第 2 步：组件设置"
+
+#: mloun-side-contact.php
+msgid "Position"
+msgstr "位置"
+
+#: mloun-side-contact.php
+msgid "Left"
+msgstr "左侧"
+
+#: mloun-side-contact.php
+msgid "Right"
+msgstr "右侧"
+
+#: mloun-side-contact.php
+msgid "Bottom Distance (px)"
+msgstr "距底部距离 (px)"
+
+#: mloun-side-contact.php
+msgid "Side Offset (px)"
+msgstr "侧边距离 (px)"
+
+#: mloun-side-contact.php
+msgid "Vertical Center"
+msgstr "垂直居中"
+
+#: mloun-side-contact.php
+msgid "Hide on Mobile"
+msgstr "移动端隐藏"
+
+#: mloun-side-contact.php
+msgid "Entrance Animation"
+msgstr "入场动画"
+
+#: mloun-side-contact.php
+msgid "None"
+msgstr "无"
+
+#: mloun-side-contact.php
+msgid "Hover Effect"
+msgstr "悬停效果"
+
+#: mloun-side-contact.php
+msgid "Color Change"
+msgstr "颜色变化"
+
+#: mloun-side-contact.php
+msgid "Hover Label"
+msgstr "悬停文字样式"
+
+#: mloun-side-contact.php
+msgid "Slide out (button widens)"
+msgstr "滑出展开（按钮变宽）"
+
+#: mloun-side-contact.php
+msgid "Tooltip bubble (button stays compact)"
+msgstr "浮动气泡（按钮保持紧凑）"
+
+#: mloun-side-contact.php
+msgid "Icon only"
+msgstr "只显示图标"
+
+#: mloun-side-contact.php
+msgid "These are alternatives, not additions: slide-out and tooltip both display the hover text, so only one can be active."
+msgstr "这两者是替代关系而非叠加：滑出和气泡都会显示悬停文字，因此只能启用其中一个。"
+
+#: mloun-side-contact.php
+msgid "Tooltip Position"
+msgstr "提示框位置"
+
+#: mloun-side-contact.php
+msgid "Automatic — the bubble opens opposite the bar, so it never leaves the screen."
+msgstr "自动——气泡会在悬浮栏的对侧展开，确保不会超出屏幕。"
+
+#: mloun-side-contact.php
+msgid "QR Code Width (px)"
+msgstr "二维码宽度 (px)"
+
+#: mloun-side-contact.php
+msgid "QR Code Height (px)"
+msgstr "二维码高度 (px)"
+
+#: mloun-side-contact.php
+msgid "The QR code is shown at exactly this size. Its white panel adds 10px (5px on each side) around it."
+msgstr "二维码按此尺寸精确显示。白色底板在四周各加 5px（共 10px）。"
+
+#: mloun-side-contact.php
+msgid "Buttons & Style"
+msgstr "按钮与样式"
+
+#: mloun-side-contact.php
+msgid "Pick a preset, then fine-tune the size. All presets only change shape, border and shadow — your channel colours stay exactly as you set them."
+msgstr "先选择预设，再微调尺寸。所有预设只改变形状、边框和阴影——频道颜色保持你设置的样子不变。"
+
+#: mloun-side-contact.php
+msgid "Classic"
+msgstr "经典"
+
+#: mloun-side-contact.php
+msgid "Minimal"
+msgstr "极简"
+
+#: mloun-side-contact.php
+msgid "Rounded"
+msgstr "圆角"
+
+#: mloun-side-contact.php
+msgid "Square"
+msgstr "方形"
+
+#: mloun-side-contact.php
+msgid "Outline"
+msgstr "描边"
+
+#: mloun-side-contact.php
+msgid "Button Size"
+msgstr "按钮尺寸"
+
+#: mloun-side-contact.php
+msgid "Preset button and icon sizes. The icon always stays proportional to the button."
+msgstr "预设按钮与图标尺寸，图标始终与按钮保持相同比例。"
+
+#: mloun-side-contact.php
+msgid "Space Between Buttons (px)"
+msgstr "按钮间距 (px)"
+
+#: mloun-side-contact.php
+msgid "Gap between stacked buttons. 0 means they touch."
+msgstr "纵向排列按钮之间的间隙。0 表示紧贴在一起。"
+
+#: mloun-side-contact.php
+msgid "Fold / Unfold"
+msgstr "折叠 / 展开"
+
+#: mloun-side-contact.php
+msgid "Show a single button at first. Visitors click it to reveal every channel, and a close button folds them away again. The toggle uses the same size, shape and shadow as your other buttons."
+msgstr "初始只显示一个按钮。访客点击后展开所有频道，再点关闭按钮收起。切换按钮与其他按钮使用相同的尺寸、形状和阴影。"
+
+#: mloun-side-contact.php
+msgid "Mode"
+msgstr "模式"
+
+#: mloun-side-contact.php
+msgid "Always expanded (no toggle)"
+msgstr "始终展开（无切换按钮）"
+
+#: mloun-side-contact.php
+msgid "Start folded"
+msgstr "初始折叠"
+
+#: mloun-side-contact.php
+msgid "Start expanded (toggle available)"
+msgstr "初始展开（提供切换按钮）"
+
+#: mloun-side-contact.php
+msgid "Toggle Icon"
+msgstr "切换按钮图标"
+
+#: mloun-side-contact.php
+msgid "Arrow (flips)"
+msgstr "箭头（自动翻转）"
+
+#: mloun-side-contact.php
+msgid "Chat with dots"
+msgstr "气泡加三点"
+
+#: mloun-side-contact.php
+msgid "Chat bubble"
+msgstr "聊天气泡"
+
+#: mloun-side-contact.php
+msgid "Round chat with dots"
+msgstr "圆形气泡加三点"
+
+#: mloun-side-contact.php
+msgid "Typing"
+msgstr "正在输入"
+
+#: mloun-side-contact.php
+msgid "Smiley chat"
+msgstr "笑脸气泡"
+
+#: mloun-side-contact.php
+msgid "Quote chat"
+msgstr "引用气泡"
+
+#: mloun-side-contact.php
+msgid "Chat bot"
+msgstr "机器人客服"
+
+#: mloun-side-contact.php
+msgid "Translate chat"
+msgstr "翻译气泡"
+
+#: mloun-side-contact.php
+msgid "Group chat"
+msgstr "群组气泡"
+
+#: mloun-side-contact.php
+msgid "Call chat"
+msgstr "通话气泡"
+
+#: mloun-side-contact.php
+msgid "Plus"
+msgstr "加号"
+
+#: mloun-side-contact.php
+msgid "Menu bars"
+msgstr "三横线"
+
+#: mloun-side-contact.php
+msgid "Three dots"
+msgstr "三个点"
+
+#: mloun-side-contact.php
+msgid "Sliders"
+msgstr "调节滑块"
+
+#: mloun-side-contact.php
+msgid "Toggle Color"
+msgstr "切换按钮颜色"
+
+#: mloun-side-contact.php
+msgid "Toggle Hover Color"
+msgstr "切换按钮悬停颜色"
+
+#: mloun-side-contact.php
+msgid "Text While Folded"
+msgstr "折叠时文字"
+
+#: mloun-side-contact.php
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: mloun-side-contact.php
+msgid "Text While Expanded"
+msgstr "展开时文字"
+
+#: mloun-side-contact.php
+msgid "Hide"
+msgstr "收起"
+
+#: mloun-side-contact.php
+msgid "Bubble Background"
+msgstr "气泡背景色"
+
+#: mloun-side-contact.php
+msgid "Bubble Text Color"
+msgstr "气泡文字颜色"
+
+#: mloun-side-contact.php
+msgid "Always show the bubble"
+msgstr "气泡始终显示"
+
+#: mloun-side-contact.php
+msgid "Off: the bubble appears on hover."
+msgstr "关闭时：气泡在悬停时显示。"
+
+#: mloun-side-contact.php
+msgid "The label is shown as a bubble beside the button on hover, so the button itself stays a clean circle. The arrow icon flips automatically; every other icon stays the same in both states."
+msgstr "文字以气泡形式在按钮旁悬停显示，按钮本身保持干净的圆形。箭头图标会自动翻转，其它图标在两个状态下保持不变。"
+
+#: mloun-side-contact.php
+msgid "Side Button"
+msgstr "侧边按钮"
+
+#: mloun-side-contact.php
+msgid "Button Text"
+msgstr "按钮文字"
+
+#: mloun-side-contact.php
+msgid "Show Contact Text"
+msgstr "显示联系文字"
+
+#: mloun-side-contact.php
+msgid "Show or hide the vertical button text."
+msgstr "显示或隐藏垂直的按钮文字。"
+
+#: mloun-side-contact.php
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: mloun-side-contact.php
+msgid "Back to channels"
+msgstr "返回频道选择"
+
+#: mloun-side-contact.php
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: mloun-side-contact.php
+msgid "Live preview"
+msgstr "实时预览"
+
+#: mloun-side-contact.php
+msgid "Widget preview"
+msgstr "组件预览"
+
+#: mloun-side-contact.php
+msgid "Preview device"
+msgstr "预览设备"
+
+#: mloun-side-contact.php
+msgid "Reflects your unsaved settings. Save to publish."
+msgstr "显示的是未保存的设置，保存后才会正式生效。"
+
+#: mloun-side-contact.php
+msgid "Mobile Layout"
+msgstr "移动端布局"
+
+#: mloun-side-contact.php
+msgid "Bottom bar (default)"
+msgstr "底部横条（默认）"
+
+#: mloun-side-contact.php
+msgid "Same as desktop side rail"
+msgstr "与电脑端一样显示在侧边"
+
+#: mloun-side-contact.php
+msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
+msgstr "选择“与电脑端一样显示在侧边”后，手机端会保持侧边悬浮，完全跟随上方的电脑端位置、边距和样式设置。折叠 / 展开设置只对侧边布局生效——底部横条始终平铺显示。"
+
+#: mloun-side-contact.php
+msgid "Live on your site · %d channel"
+msgid_plural "Live on your site · %d channels"
+msgstr[0] "站点上已上线 %d 个渠道"

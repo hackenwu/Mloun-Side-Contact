@@ -1,0 +1,748 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mloun Side Contact 1.4.36\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone/\n"
+"POT-Creation-Date: 2026-11-11 21:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Domain: mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone\n"
+
+#: mloun-side-contact.php
+msgid "Small"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Medium"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Large"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "WhatsApp"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Digits only, no + or spaces. Example: 8613800000000"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Telegram"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Telegram username, without the @."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Phone Call"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Visitors tap the button to call this number."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "SMS"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Opens the visitor SMS app with this number."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Email"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Opens the visitor email app."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Messenger"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Facebook Page username."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Instagram"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Instagram username, without the @."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Facebook"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "LinkedIn"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Profile slug after /in/. For a company page, paste the full URL instead."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "X (Twitter)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your X username, without the @."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "YouTube"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Channel handle after @. For a legacy /c/ or /channel/ URL, paste the full URL instead."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "TikTok"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your TikTok username, without the @."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Line"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Line ID."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Viber"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Full international number, digits only."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Skype"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Skype ID."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Microsoft Teams"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "The email you sign in to Microsoft Teams with. Visitors open a chat with you."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Zalo"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your Zalo phone number, digits only."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "QQ"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your QQ number."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "WeChat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "WeChat cannot be opened by a link. Upload your WeChat QR code below and visitors scan it."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Location"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "An address opens Google Maps. A full URL is used as-is."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Custom Link"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Paste any URL. Click the tile again to add more than one custom link."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Back to Top"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Always sits at the bottom of the bar. Hidden until the visitor scrolls past 20% of the page, then it fades in; clicking it scrolls smoothly to the top and it hides again."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Mloun Side Contact"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Side Contact"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Settings"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Choose image"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Use this image"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Remove image"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Preview could not be updated."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Preview returned no markup. Open the browser console for details."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hidden on phones: the \"Hide on mobile\" option is on."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Add a channel to see the preview."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Not allowed."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Preview payload too large."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Remove"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Nothing to fill in here. This button only scrolls the page back to the top."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Country Code"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Other"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Phone Number"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Email Address"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Link URL"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "QR Code Image"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Account"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "On Hover Text"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Icon Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hover Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Open in New Window"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Prefilled Message"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hello! I am interested in your products. Please send me a quote."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Visitors open the chat with this message already typed. Leave blank to disable."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Advanced"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Optional. Shows a QR code when visitors hover the button."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Custom Icon"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Optional. Replaces the channel icon with your own image."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Show on"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Desktop"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Mobile"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Both are on by default. Uncheck a device to hide this channel there."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Link Override"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Overrides the auto-generated link. Accepts a URL, an anchor like #open-chat, or javascript:void(SomeWidget.toggle())."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Custom CSS Class"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Added to the button link, so you can target it from your own CSS or JS."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Add another %s"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Upload / Select image"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Not shown: no channels selected"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Settings saved."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Setup steps"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Select channels"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Widget customization"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Step 1: Choose your channels"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Click a channel to add it. You only fill in your number or username — the plugin builds the correct link for you, so nothing can be mistyped."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "click again to add another"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Tiles marked with + can be added more than once — click again for another button. Custom Link works this way."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "The dashed tile (Back to Top) is a page button, not a chat channel — it appears in the bottom corner once visitors scroll past 20% of the page."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Your channels"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "No channels yet — pick one above to get started."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Continue to widget customization"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Step 2: Widget customization"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Position"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Left"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Right"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Bottom Distance (px)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Side Offset (px)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Vertical Center"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hide on Mobile"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Entrance Animation"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "None"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hover Effect"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Color Change"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hover Label"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Slide out (button widens)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Tooltip bubble (button stays compact)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Icon only"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "These are alternatives, not additions: slide-out and tooltip both display the hover text, so only one can be active."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Tooltip Position"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Automatic — the bubble opens opposite the bar, so it never leaves the screen."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "QR Code Width (px)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "QR Code Height (px)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "The QR code is shown at exactly this size. Its white panel adds 10px (5px on each side) around it."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Buttons & Style"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Pick a preset, then fine-tune the size. All presets only change shape, border and shadow — your channel colours stay exactly as you set them."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Classic"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Minimal"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Rounded"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Square"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Outline"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Button Size"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Preset button and icon sizes. The icon always stays proportional to the button."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Space Between Buttons (px)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Gap between stacked buttons. 0 means they touch."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Fold / Unfold"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Show a single button at first. Visitors click it to reveal every channel, and a close button folds them away again. The toggle uses the same size, shape and shadow as your other buttons."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Mode"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Always expanded (no toggle)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Start folded"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Start expanded (toggle available)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Toggle Icon"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Arrow (flips)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Chat with dots"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Chat bubble"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Round chat with dots"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Typing"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Smiley chat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Quote chat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Chat bot"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Translate chat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Group chat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Call chat"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Plus"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Menu bars"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Three dots"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Sliders"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Toggle Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Toggle Hover Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Text While Folded"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Contact Us"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Text While Expanded"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Hide"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Bubble Background"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Bubble Text Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Always show the bubble"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Off: the bubble appears on hover."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "The label is shown as a bubble beside the button on hover, so the button itself stays a clean circle. The arrow icon flips automatically; every other icon stays the same in both states."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Side Button"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Button Text"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Show Contact Text"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Show or hide the vertical button text."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Background Color"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Back to channels"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Save Settings"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Live preview"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Widget preview"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Preview device"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Reflects your unsaved settings. Save to publish."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Mobile Layout"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Bottom bar (default)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Same as desktop side rail"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Live on your site · %d channel"
+msgid_plural "Live on your site · %d channels"
+msgstr[0] ""

@@ -1,0 +1,852 @@
+/**
+ * Mloun Side Contact - Frontend Styles
+ * 
+ * @package Mloun_Side_Contact
+ * @version 1.2.0
+ */
+
+.mlsc {
+    /* Size knobs are overridden by an inline style attribute on the wrapper. */
+    --mlsc-size: 50px;
+    --mlsc-icon: 24px;
+    --mlsc-gap: 0px;
+    /* Half the height, NOT 50% — 50% turns into an ellipse once the button widens
+       on hover; this keeps circular ends (pill shape) while it grows. */
+    --mlsc-radius: calc(var(--mlsc-size) / 2);
+    --mlsc-expand: 190px;
+    position: fixed;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+.mlsc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mlsc li {
+    position: relative;
+    width: var(--mlsc-size);
+    height: var(--mlsc-size);
+    margin: 0 0 var(--mlsc-gap) 0;
+}
+
+.mlsc li.contact-item {
+    height: auto;
+}
+
+.mlsc .contact-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    /* Matches Buttons & Style: circle presets give a pill, rounded 12px, square 0. */
+    border-radius: var(--mlsc-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.mlsc .item-inner {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: var(--mlsc-size);
+    width: var(--mlsc-size);
+    border-radius: var(--mlsc-radius);
+    overflow: hidden;
+    transition: width .3s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Only the "slide" label mode widens the button. tooltip/none must stay compact. */
+.mlsc.mlsc-label-slide li:hover .item-inner {
+    width: calc(var(--mlsc-size) + var(--mlsc-expand));
+}
+
+.mlsc .mlsc-svg-icon {
+    width: var(--mlsc-size);
+    height: var(--mlsc-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mlsc .mlsc-svg-icon svg {
+    width: var(--mlsc-icon);
+    height: var(--mlsc-icon);
+    display: block;
+}
+
+.mlsc .item-inner img {
+    /* Uploaded icons share the exact box the built-in SVGs get. A fixed 30px image with
+       10px side margins overflowed a 46px button and pushed the artwork 2px right of
+       centre. */
+    width: var(--mlsc-icon);
+    height: var(--mlsc-icon);
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.mlsc .text {
+    white-space: nowrap;
+    padding-right: 15px;
+    opacity: 0;
+    transition: opacity .2s ease .1s;
+}
+
+.mlsc.mlsc-label-slide li:hover .text {
+    opacity: 1;
+}
+
+/* Tooltip and icon-only modes never show the inline label — otherwise the text
+   would be drawn twice (once inside the button, once in the bubble). */
+.mlsc.mlsc-label-tooltip .item-inner .text,
+.mlsc.mlsc-label-none .item-inner .text {
+    display: none;
+}
+
+/* The tooltip bubble is a ::after positioned OUTSIDE the button, so the usual
+   overflow:hidden on .item-inner clips it away entirely — it computed fine but
+   never painted. In tooltip mode there is no inline text to clip, so open it up. */
+.mlsc.mlsc-label-tooltip .item-inner {
+    overflow: visible;
+}
+
+.mlsc .qr {
+    position: absolute;
+    top: var(--mlsc-size);
+    display: none;
+    z-index: 99999;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    /* width / height / padding come from the plugin options via inline CSS. */
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.mlsc li:hover .qr {
+    display: flex;
+}
+
+.mlsc .qr img {
+    object-fit: contain;
+    display: block;
+}
+
+/* Non-link buttons (e.g. WeChat QR) must not look clickable */
+.mlsc span.item-inner {
+    cursor: default;
+}
+
+/* ============================================
+   v1.2.0 - Entrance Animations
+   ============================================ */
+@keyframes mlscFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mlscSlideInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes mlscSlideInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes mlscBounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes mlscZoomIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.mlsc li.mlsc-anim-fadeIn {
+    animation: mlscFadeIn 0.6s ease both;
+}
+
+.mlsc li.mlsc-anim-slideIn {
+    animation: mlscSlideInRight 0.5s ease both;
+}
+
+.mlsc.mlsc-position-left li.mlsc-anim-slideIn,
+.mlsc li.mlsc-anim-slideIn[data-side="left"] {
+    animation: mlscSlideInLeft 0.5s ease both;
+}
+
+.mlsc li.mlsc-anim-bounceIn {
+    animation: mlscBounceIn 0.7s ease both;
+}
+
+.mlsc li.mlsc-anim-zoomIn {
+    animation: mlscZoomIn 0.4s ease both;
+}
+
+/* Stagger delay for items */
+.mlsc li.mlsc-anim-fadeIn:nth-child(1) { animation-delay: 0.05s; }
+.mlsc li.mlsc-anim-fadeIn:nth-child(2) { animation-delay: 0.10s; }
+.mlsc li.mlsc-anim-fadeIn:nth-child(3) { animation-delay: 0.15s; }
+.mlsc li.mlsc-anim-fadeIn:nth-child(4) { animation-delay: 0.20s; }
+.mlsc li.mlsc-anim-fadeIn:nth-child(5) { animation-delay: 0.25s; }
+.mlsc li.mlsc-anim-fadeIn:nth-child(6) { animation-delay: 0.30s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(1) { animation-delay: 0.05s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(2) { animation-delay: 0.10s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(3) { animation-delay: 0.15s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(4) { animation-delay: 0.20s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(5) { animation-delay: 0.25s; }
+.mlsc li.mlsc-anim-slideIn:nth-child(6) { animation-delay: 0.30s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(1) { animation-delay: 0.08s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(2) { animation-delay: 0.16s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(3) { animation-delay: 0.24s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(4) { animation-delay: 0.32s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(5) { animation-delay: 0.40s; }
+.mlsc li.mlsc-anim-bounceIn:nth-child(6) { animation-delay: 0.48s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(1) { animation-delay: 0.05s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(2) { animation-delay: 0.10s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(3) { animation-delay: 0.15s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(4) { animation-delay: 0.20s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(5) { animation-delay: 0.25s; }
+.mlsc li.mlsc-anim-zoomIn:nth-child(6) { animation-delay: 0.30s; }
+
+/* ============================================
+   v1.2.0 - Hover Effects
+   ============================================ */
+.mlsc .item-inner.mlsc-hover-scale {
+    transition: width .3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.mlsc li:hover .item-inner.mlsc-hover-scale {
+    transform: scale(1.08);
+}
+
+@keyframes mlscShake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
+}
+
+.mlsc li:hover .item-inner.mlsc-hover-shake {
+    animation: mlscShake 0.5s ease;
+}
+
+@keyframes mlscPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.mlsc li:hover .item-inner.mlsc-hover-pulse {
+    animation: mlscPulse 1s ease;
+}
+
+/* ============================================
+   v1.2.0 - Tooltips
+   ============================================ */
+.mlsc [data-mlsc-tooltip] {
+    position: relative;
+}
+
+.mlsc [data-mlsc-tooltip]::after {
+    content: attr(data-mlsc-tooltip);
+    position: absolute;
+    padding: 5px 12px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 99999;
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]::after {
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(5px);
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]::after {
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.mlsc [data-mlsc-tooltip]:hover::after {
+    opacity: 1;
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]:hover::after {
+    transform: translateY(-50%) translateX(0);
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]:hover::after {
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Tooltip arrow */
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]::before,
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]::before {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 99999;
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]::before {
+    right: calc(100% + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-color: #1a1a2e;
+}
+
+.mlsc [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]::before {
+    left: calc(100% + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-color: #1a1a2e;
+}
+
+.mlsc [data-mlsc-tooltip]:hover::before {
+    opacity: 1;
+}
+
+/* Mobile Styles */
+@media(max-width:768px) {
+    .mlsc.mlsc-mobile-hide {
+        display: none;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: none;
+        width: 100%;
+        background: #fff;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) ul {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) li {
+        flex: 1;
+        width: auto;
+        height: var(--mlsc-size);
+        margin: 0;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) li.contact-item {
+        display: none;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) .item-inner {
+        position: static;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        overflow: visible;
+        border-radius: 0;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) li:hover .item-inner {
+        width: 100%;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) .text {
+        display: none;
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) .qr {
+        top: auto;
+        bottom: 60px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    
+    .mlsc:not(.mlsc-mobile-hide):not(.mlsc-mobile-side) li:hover .qr {
+        display: block;
+    }
+}
+
+
+/* ============================================================
+   v1.4.2 - Back to Top is the LAST item of the bar
+   ============================================================
+   It is a normal <li> in the bar, so it inherits the widget position, the size
+   knobs and the style preset automatically. Only its visibility is special. */
+/* The Back to Top slot is ALWAYS reserved. Toggling display would change the bar's
+   height, and because the bar is bottom-anchored that shifts every button above it
+   — the whole widget appears to jump when Back to Top fades in or out. Only
+   visibility/opacity change, so nothing ever moves. */
+.mlsc li.mlsc-totop-item {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.mlsc li.mlsc-totop-item.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mlsc li.mlsc-totop-item .item-inner {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mlsc li.mlsc-totop-item.is-visible {
+        animation: none;
+    }
+}
+
+/* ============================================================
+   v1.4.0 - Widget style presets
+   ============================================================ */
+.mlsc-style-classic {
+    --mlsc-radius: calc(var(--mlsc-size) / 2);
+}
+
+.mlsc-style-classic .item-inner {
+    /* Layered elevation so Classic reads clearly as "floating" next to the flat Minimal. */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .3), 0 2px 5px rgba(0, 0, 0, .16);
+}
+
+.mlsc-style-classic li:hover .item-inner {
+    box-shadow: 0 9px 24px rgba(0, 0, 0, .34), 0 3px 7px rgba(0, 0, 0, .18);
+}
+
+.mlsc-style-minimal {
+    --mlsc-radius: calc(var(--mlsc-size) / 2);
+}
+
+.mlsc-style-minimal .item-inner {
+    box-shadow: none;
+}
+
+.mlsc-style-rounded {
+    --mlsc-radius: 12px;
+}
+
+.mlsc-style-rounded .item-inner {
+    box-shadow: 0 5px 14px rgba(0, 0, 0, .26), 0 2px 4px rgba(0, 0, 0, .14);
+}
+
+.mlsc-style-rounded li:hover .item-inner {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3), 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.mlsc-style-square {
+    --mlsc-radius: 0;
+}
+
+.mlsc-style-square .item-inner {
+    box-shadow: none;
+}
+
+/* Outline: white fill, brand-coloured border and icon; inverts on hover. */
+.mlsc-style-outline {
+    --mlsc-radius: calc(var(--mlsc-size) / 2);
+}
+
+.mlsc-style-outline .item-inner {
+    background: #fff !important;
+    /* Drawn with an inset shadow instead of a border: a real border would add 4px to
+       the box height and the radius (half the height) would no longer be a true
+       semicircle, flattening the ends of the pill. */
+    border: 0;
+    box-shadow: inset 0 0 0 2px var(--mlsc-item-color, #333);
+    color: var(--mlsc-item-color, #333);
+}
+
+.mlsc-style-outline .mlsc-svg-icon svg {
+    fill: var(--mlsc-item-color, #333);
+}
+
+.mlsc-style-outline .item-inner .text {
+    color: var(--mlsc-item-color, #333);
+}
+
+.mlsc-style-outline .item-inner img {
+    /* Uploaded raster icons cannot be recoloured — keep them visible. */
+    filter: none;
+}
+
+.mlsc-style-outline li:hover .item-inner {
+    background: var(--mlsc-item-hover, var(--mlsc-item-color, #333)) !important;
+    box-shadow: inset 0 0 0 2px var(--mlsc-item-hover, var(--mlsc-item-color, #333));
+}
+
+.mlsc-style-outline li:hover .item-inner svg {
+    fill: #fff;
+}
+
+.mlsc-style-outline li:hover .item-inner .text {
+    color: #fff;
+}
+
+/* The Back to Top item lives inside the bar, so the style presets reach it
+   through the normal .mlsc-style-* rules — no per-element overrides needed. */
+
+
+/* ============================================================
+   v1.4.3 - Per-channel device visibility
+   ============================================================ */
+@media (min-width: 769px) {
+    .mlsc li.mlsc-hide-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mlsc li.mlsc-hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Back to Top on phones: no special case any more.
+   It used to be force-visible here (display/visibility/opacity all !important),
+   which defeated the script's scroll threshold — the button never faded out at the
+   top of the page and never faded in on scroll, so it behaved differently from the
+   desktop rail. The desktop rules now apply at every width: the slot stays
+   reserved (nothing jumps) and .is-visible — added by the script past 20% of the
+   page — is the only thing that reveals it. An explicit "hide on mobile" flag
+   still wins, through the .mlsc-hide-mobile rule above. */
+
+
+/* ============================================================
+   v1.4.4 - Centered layout stability + mobile tooltip placement
+   ============================================================ */
+
+/* With Vertical Center the whole bar is re-centred every time its height changes,
+   so a Back-to-Top item that pops in and out makes every button jump. Keep its
+   slot reserved in that layout and only fade the button itself. */
+.mlsc.mlsc-centered li.mlsc-totop-item {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.mlsc.mlsc-centered li.mlsc-totop-item.is-visible {
+    visibility: visible;
+    opacity: 1;
+    animation: none;
+}
+
+/* On the mobile bar the tooltip belongs ABOVE the button, centred, with a
+   downward arrow — left/right would push it off a narrow screen. */
+@media (max-width: 768px) {
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]::after,
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]::after {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: calc(100% + 12px);
+        transform: translateX(-50%) translateY(4px);
+        white-space: nowrap;
+    }
+
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]:hover::after,
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]:hover::after {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="left"]::before,
+    .mlsc:not(.mlsc-mobile-side) [data-mlsc-tooltip][data-mlsc-tooltip-pos="right"]::before {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: calc(100% + 2px);
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-top-color: #1a1a2e;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+}
+
+/* v1.4.38 - Phone BOTTOM BAR, Back to Top only.
+   The bar is a full-width row and Back to Top is its last button, so a bubble
+   centred on it hung past the right edge of the screen and got clipped mid-word.
+   Anchor that one bubble to the right edge and let it grow inward; the caret
+   follows it. No other button in the bar is touched. */
+@media (max-width: 768px) {
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-totop-item [data-mlsc-tooltip]::after {
+        left: auto;
+        right: 0;
+        transform: translateY(4px);
+    }
+
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-totop-item [data-mlsc-tooltip]:hover::after {
+        transform: translateY(0);
+    }
+
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-totop-item [data-mlsc-tooltip]::before {
+        left: auto;
+        right: 12px;
+        transform: none;
+    }
+}
+
+
+/* ============================================================
+   v1.4.9 - Fold / unfold control
+   ============================================================
+   The toggle is a normal <li>, so it inherits the size, shape, shadow and colour
+   treatment of the selected style preset. It sits directly ABOVE Back to Top,
+   which always stays the last button in the bar. Its label is drawn as a bubble
+   beside the button, never inside it, so the button stays a clean circle. */
+
+/* Folded: every channel disappears, the toggle and Back to Top stay.
+   Two separate cases, on purpose:
+     • Desktop (> 768px)                        -> always honoured.
+     • Phones using "Same as desktop side rail" -> honoured, exactly like desktop.
+     • Phones using the BOTTOM BAR              -> IGNORED; see the override below. */
+.mlsc.mlsc-collapsed li:not(.mlsc-toggle-item):not(.mlsc-totop-item) {
+    display: none !important;
+}
+
+/* Phones in the BOTTOM-BAR layout ignore Fold / Unfold completely. The bar is a
+   flat row along the bottom edge, so the fold control is not rendered and every
+   enabled channel is laid out side by side — identical to the pre-1.4.32 look.
+   Only the side-rail layout follows the setting.
+   Higher specificity than the fold rule above so it wins even though both are
+   !important. .mlsc-hide-mobile and .contact-item are excluded from the restore
+   so their own hiding rules keep working. */
+@media (max-width: 768px) {
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-toggle-item {
+        display: none !important;
+    }
+
+    .mlsc:not(.mlsc-mobile-side).mlsc-collapsed li:not(.mlsc-toggle-item):not(.mlsc-totop-item):not(.mlsc-hide-mobile):not(.contact-item) {
+        display: block !important;
+    }
+}
+
+/* Only one face of the toggle is ever shown. */
+.mlsc.mlsc-collapsed .mlsc-toggle-when-open {
+    display: none !important;
+}
+
+.mlsc.mlsc-open .mlsc-toggle-when-closed {
+    display: none !important;
+}
+
+.mlsc .mlsc-toggle {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: #fff;
+}
+
+/* The bubble is painted outside the button, so the usual overflow:hidden would
+   clip it away entirely. Also keep the button compact: it is a control, not a
+   channel, so the hover label must not widen it. */
+.mlsc li.mlsc-toggle-item .item-inner,
+.mlsc.mlsc-label-slide li.mlsc-toggle-item:hover .item-inner {
+    overflow: visible;
+    width: var(--mlsc-size);
+}
+
+/* Which label the bubble shows depends on the state. The closed text lives in
+   data-mlsc-tooltip (the attribute the shared bubble rules already read); the
+   open text needs one rule of its own to take over. */
+.mlsc.mlsc-open .mlsc-toggle[data-mlsc-tip-open]::after {
+    content: attr(data-mlsc-tip-open);
+}
+
+/* ---- Outline preset: white fill + coloured ring, like every other button ---- */
+.mlsc-style-outline .mlsc-toggle {
+    background: #fff !important;
+    box-shadow: inset 0 0 0 2px var(--mlsc-item-color, #333);
+}
+
+.mlsc-style-outline .mlsc-toggle svg {
+    fill: var(--mlsc-item-color, #333);
+}
+
+.mlsc-style-outline .mlsc-toggle:hover {
+    background: var(--mlsc-item-hover, var(--mlsc-item-color, #333)) !important;
+}
+
+.mlsc-style-outline .mlsc-toggle:hover svg {
+    fill: #fff;
+}
+
+/* ============================================================
+   v1.4.9 - Hard lock while Back to Top scrolls the page
+   ============================================================
+   Declared last on purpose: it must outrank .is-visible so no other code path
+   (double boot, resize, scroll race) can flash the button back on. */
+/* No `display` here on purpose: the slot stays reserved so the lock cannot make
+   the rest of the bar move. */
+.mlsc.mlsc-totop-locked li.mlsc-totop-item {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* On phones the bar is a full-width row, so the folded toggle and Back to Top
+   would stretch across the whole width (flex:1). Keep them at their natural
+   size, right-aligned, so a folded bar reads as a normal corner toolbar. */
+@media (max-width: 768px) {
+    .mlsc.mlsc-collapsed ul {
+        justify-content: flex-end;
+    }
+
+    .mlsc li.mlsc-toggle-item,
+    .mlsc.mlsc-collapsed li.mlsc-totop-item {
+        flex: 0 0 var(--mlsc-size);
+    }
+}
+
+/* ============================================================
+   v1.4.10 - Toggle bubble: custom colours and optional always-on
+   ============================================================ */
+.mlsc li.mlsc-toggle-item .item-inner::after {
+    background: var(--mlsc-tip-bg, #1a1a2e);
+    color: var(--mlsc-tip-fg, #fff);
+}
+
+.mlsc li.mlsc-toggle-item .item-inner[data-mlsc-tooltip-pos="left"]::before {
+    border-left-color: var(--mlsc-tip-bg, #1a1a2e);
+}
+
+.mlsc li.mlsc-toggle-item .item-inner[data-mlsc-tooltip-pos="right"]::before {
+    border-right-color: var(--mlsc-tip-bg, #1a1a2e);
+}
+
+/* Always-on: the bubble skips the hover step and sits in place. */
+.mlsc.mlsc-tip-always li.mlsc-toggle-item .item-inner::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.mlsc.mlsc-tip-always li.mlsc-toggle-item .item-inner::before {
+    opacity: 1;
+}
+
+/* Phones used to hide the fold control here and force every channel open, which
+   made the Fold / Unfold setting a no-op on mobile. That override is gone on
+   purpose: the bottom bar and the side rail now both follow the setting.
+   Per-channel mobile visibility is still enforced by the .mlsc-hide-mobile rule
+   above, and .contact-item is already hidden by the bottom-bar block. */
+
+/* ============================================================
+   v1.4.29 - Fold bubble as real text (page-translator friendly)
+   ============================================================
+   The bubble used to be drawn with `content: attr(data-mlsc-tooltip)`, which no
+   page translator can see — TranslatePress and WPML only translate text nodes.
+   The label now lives in real <span>s; the pseudo-element is switched off so the
+   bubble is not drawn twice. */
+.mlsc li.mlsc-toggle-item .item-inner::after,
+.mlsc li.mlsc-toggle-item .item-inner::before {
+    content: none !important;
+    display: none !important;
+}
+
+.mlsc li.mlsc-toggle-item .mlsc-tip {
+    position: absolute;
+    top: 50%;
+    padding: 5px 12px;
+    background: var(--mlsc-tip-bg, #1a1a2e);
+    color: var(--mlsc-tip-fg, #fff);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 99999;
+}
+
+.mlsc li.mlsc-toggle-item .mlsc-tip-closed,
+.mlsc li.mlsc-toggle-item .mlsc-tip-open {
+    left: calc(100% + 12px);
+    transform: translateY(-50%) translateX(-5px);
+}
+
+/* Only the label that matches the current state exists in the layout. */
+.mlsc.mlsc-open li.mlsc-toggle-item .mlsc-tip-closed {
+    display: none;
+}
+
+.mlsc.mlsc-collapsed li.mlsc-toggle-item .mlsc-tip-open {
+    display: none;
+}
+
+.mlsc li.mlsc-toggle-item:hover .mlsc-tip,
+.mlsc.mlsc-tip-always li.mlsc-toggle-item .mlsc-tip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Left-handed tooltip position keeps the bubble on the other side. */
+.mlsc li.mlsc-toggle-item .item-inner[data-mlsc-tooltip-pos="left"] .mlsc-tip {
+    left: auto;
+    right: calc(100% + 12px);
+    transform: translateY(-50%) translateX(5px);
+}
+
+.mlsc li.mlsc-toggle-item:hover .item-inner[data-mlsc-tooltip-pos="left"] .mlsc-tip {
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Phones in the BOTTOM-BAR layout: the bubble belongs above the button, centred,
+   because the bar is full width and a side-opening bubble has no "inside" to open
+   towards. Scoped with :not(.mlsc-mobile-side) on purpose — with "Same as desktop
+   side rail" the rail hugs a screen edge, so the bubble must keep the desktop
+   placement (icon on the right → text on its left, icon on the left → text on its
+   right). Forcing it above+centred there pushed it half off-screen. */
+@media (max-width: 768px) {
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-toggle-item .mlsc-tip,
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-toggle-item .item-inner[data-mlsc-tooltip-pos="left"] .mlsc-tip {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: calc(100% + 12px);
+        transform: translateX(-50%) translateY(4px);
+    }
+
+    .mlsc:not(.mlsc-mobile-side) li.mlsc-toggle-item:hover .mlsc-tip {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
