@@ -1,3 +1,5 @@
+**English** | [简体中文](README.zh-CN.md)
+
 # Mloun Side Contact
 
 A floating contact bar for WordPress — WhatsApp, WeChat, Telegram, phone, email and 20+ channels, docked to the side or the bottom edge of the page.
@@ -33,6 +35,10 @@ Or zip the folder and upload it under **Plugins → Add New → Upload Plugin**:
 ```bash
 zip -r mloun-side-contact.zip . -x "tests/*" -x "*.py" -x ".git/*"
 ```
+
+### From Releases
+
+Every version is published with an installable zip on the [Releases](https://github.com/hackenwu/Mloun-Side-Contact/releases) page — download `mloun-side-contact-vX.Y.Z.zip` and upload it directly (the archive contains a single, WordPress-standard plugin folder).
 
 ## Requirements
 
