@@ -3,7 +3,7 @@
  * Plugin Name:       Mloun Side Contact – Floating Contact Buttons for online chat, WeChat & Phone
  * Plugin URI:        https://wordpress.org/plugins/mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone/
  * Description:       A fully functional side-hover slide-out plugin that supports multiple contact methods.
- * Version:           1.4.38
+ * Version:           1.4.39
  * Requires at least: 5.0
  * Requires PHP:      7.4
  * Author:            <a href="https://mloun.cn/">Mloun</a>
@@ -18,7 +18,7 @@ if ( defined( 'MLSC_VERSION' ) ) {
     return;
 }
 
-define( 'MLSC_VERSION', '1.4.38' );
+define( 'MLSC_VERSION', '1.4.39' );
 define( 'MLSC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MLSC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -729,6 +729,7 @@ function mlsc_sanitize_options( $input ) {
                 'link'        => isset( $item['link'] ) ? mlsc_sanitize_link_override( $item['link'] ) : '',
                 'css_class'   => isset( $item['css_class'] ) ? mlsc_sanitize_css_classes( $item['css_class'] ) : '',
                 'qr'          => isset( $item['qr'] ) ? esc_url_raw( $item['qr'] ) : '',
+                'img_alt'     => isset( $item['img_alt'] ) ? sanitize_text_field( $item['img_alt'] ) : '',
                 'blank'       => isset( $item['blank'] ) ? 1 : 0,
                 'custom_icon' => isset( $item['custom_icon'] ) ? esc_url_raw( $item['custom_icon'] ) : '',
                 'prefill'     => isset( $item['prefill'] ) ? sanitize_textarea_field( $item['prefill'] ) : '',
@@ -953,6 +954,7 @@ function mlsc_render_channel_card( $channel_key, $index, $item = array(), $is_te
             'hover_color' => '',
             'link'        => '',
             'qr'          => '',
+            'img_alt'     => '',
             'blank'       => isset( $ch['blank'] ) ? $ch['blank'] : 0,
             'custom_icon' => '',
             'prefill'     => '',
@@ -1072,6 +1074,11 @@ function mlsc_render_channel_card( $channel_key, $index, $item = array(), $is_te
                 <?php endif; ?>
                 <?php mlsc_media_field( $pre . '[custom_icon]', isset( $item['custom_icon'] ) ? $item['custom_icon'] : '', __( 'Custom Icon', 'mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone' ), __( 'Optional. Replaces the channel icon with your own image.', 'mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone' ) ); ?>
                 <div class="mlsc-field mlsc-field-full">
+                    <label><?php esc_html_e( 'Image ALT Text', 'mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone' ); ?></label>
+                    <input type="text" name="<?php echo esc_attr( $pre ); ?>[img_alt]" value="<?php echo esc_attr( $item['img_alt'] ); ?>" class="mlsc-input" placeholder="<?php echo esc_attr( 'WeChat QR code' ); ?>">
+                    <p class="description"><?php esc_html_e( 'Applies to the QR code and custom icon of this channel. Leave blank to use the ALT text set on the image in the media library; if that is empty too, the channel name is used.', 'mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone' ); ?></p>
+                </div>
+                <div class="mlsc-field mlsc-field-full">
                     <label><?php esc_html_e( 'Show on', 'mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone' ); ?></label>
                     <div class="mlsc-device-switch">
                         <label class="mlsc-device-opt">
@@ -1127,6 +1134,45 @@ function mlsc_render_channel_card( $channel_key, $index, $item = array(), $is_te
 }
 endif;
 
+
+/**
+ * Alt text for an uploaded image (QR code, custom icon).
+ *
+ * Priority: the per-channel ALT field, then the image's own ALT from the
+ * media library, then the caller's fallback (usually the channel label).
+ * Site owners normally fill the field in the media library, so it must win
+ * over a generic fallback — an empty alt="" is only right for decoration.
+ */
+if ( ! function_exists( 'mlsc_image_alt' ) ) :
+function mlsc_image_alt( $url, $fallback = '', $override = '' ) {
+    // wp_strip_all_tags() is core and always loaded by the time the widget
+    // renders, and Plugin Check requires it over PHP's native tag stripper.
+    $override = trim( wp_strip_all_tags( (string) $override ) );
+    if ( '' !== $override ) {
+        return $override;
+    }
+
+    $url = (string) $url;
+    if ( '' === $url ) {
+        return trim( wp_strip_all_tags( (string) $fallback ) );
+    }
+
+    $alt = '';
+    if ( function_exists( 'attachment_url_to_postid' ) && function_exists( 'get_post_meta' ) ) {
+        $id = (int) attachment_url_to_postid( $url );
+        if ( $id > 0 ) {
+            $alt = (string) get_post_meta( $id, '_wp_attachment_image_alt', true );
+        }
+    }
+
+    $alt = trim( wp_strip_all_tags( $alt ) );
+    if ( '' !== $alt ) {
+        return $alt;
+    }
+
+    return trim( wp_strip_all_tags( $fallback ) );
+}
+endif;
 
 if ( ! function_exists( 'mlsc_media_field' ) ) :
 /**
@@ -1746,13 +1792,13 @@ function mlsc_render_widget( $options ) {
                 <<?php echo $tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> class="item-inner <?php echo esc_attr( $hover_class ); ?><?php echo ! empty( $item['css_class'] ) ? ' ' . esc_attr( $item['css_class'] ) : ''; ?>"<?php echo $href_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> style="<?php echo esc_attr( $item_style ); ?>" data-hover="<?php echo esc_attr( $hover_bg ); ?>"<?php echo ( 'a' === $tag ) ? $target : ''; // phpcs:ignore ?><?php echo $tail_attr; // phpcs:ignore ?><?php echo $tooltip; // phpcs:ignore ?>>
                     <?php if ( '' !== $custom ) : ?>
                         <?php // Same wrapper as the built-in SVGs, so an uploaded image gets identical centring. ?>
-                        <span class="mlsc-svg-icon mlsc-custom-icon"><img src="<?php echo esc_url( $custom ); ?>" alt=""></span>
+                        <span class="mlsc-svg-icon mlsc-custom-icon"><img src="<?php echo esc_url( $custom ); ?>" alt="<?php echo esc_attr( mlsc_image_alt( $custom, $label, isset( $item['img_alt'] ) ? $item['img_alt'] : '' ) ); ?>"></span>
                     <?php else : ?>
                         <span class="mlsc-svg-icon"><?php echo wp_kses( mlsc_get_svg_icon( $icon_key ), mlsc_svg_allowed_tags() ); ?></span>
                     <?php endif; ?>
                     <span class="text"><?php echo esc_html( $label ); ?></span>
                 </<?php echo $tag; // phpcs:ignore ?>>
-                <?php if ( ! empty( $item['qr'] ) ) : ?><div class="qr"><img src="<?php echo esc_url( $item['qr'] ); ?>" alt=""></div><?php endif; ?>
+                <?php if ( ! empty( $item['qr'] ) ) : ?><div class="qr"><img src="<?php echo esc_url( $item['qr'] ); ?>" alt="<?php echo esc_attr( mlsc_image_alt( $item['qr'], $label, isset( $item['img_alt'] ) ? $item['img_alt'] : '' ) ); ?>"></div><?php endif; ?>
             </li>
             <?php endforeach; ?>
 

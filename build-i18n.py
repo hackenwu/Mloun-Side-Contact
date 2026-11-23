@@ -33,6 +33,9 @@ ZH = {
     "Preview returned no markup. Open the browser console for details.": "预览没有返回内容，请打开浏览器控制台查看原因。",
     'Hidden on phones: the "Hide on mobile" option is on.': '手机端已隐藏：后台开启了"手机端隐藏"。',
     "QR Code Image": "二维码图片",
+    "Image ALT Text": "图片 ALT 文字",
+    "Applies to the QR code and custom icon of this channel. Leave blank to use the ALT text set on the image in the media library; if that is empty too, the channel name is used.":
+        "适用于该频道的二维码与自定义图标。留空则使用媒体库中图片已设置的 ALT 文字；若那里也为空，则使用频道名称。",
     "Custom Icon": "自定义图标",
     "Optional. Replaces the channel icon with your own image.": "可选。用你自己的图片替换频道图标。",
     "Upload / Select image": "上传 / 选择图片",

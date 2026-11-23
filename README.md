@@ -10,6 +10,7 @@ This repository is the **free version** source (also published on [WordPress.org
 
 - **24 channels** — WhatsApp, WeChat, Telegram, Messenger, Zalo, Viber, LINE, KakaoTalk, email, phone, SMS, custom links, back-to-top
 - **Two layouts** — vertical side rail (folds open) or full-width bottom bar; desktop and mobile are configured separately
+- **Accessible images** — QR codes and custom icons carry real ALT text (from the media library, or a per-channel override), so screen readers and image search can use them
 - **QR panels** — for channels that cannot take a text URL (WeChat, and anything with a scan code)
 - **Full styling** — icon or text buttons, three bar sizes, brand colours, per-channel colours, label expand direction
 - **Translatable** — every label is a real text node, so TranslatePress, WPML and Polylang can pick it up; Chinese language pack included

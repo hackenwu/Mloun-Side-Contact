@@ -46,6 +46,7 @@ function add_menu_page(){ return 'x'; } function add_submenu_page(){ return 'x';
 function register_setting(){}
 
 function sanitize_html_class($c,$f=''){ $c=preg_replace('/[^A-Za-z0-9_-]/','',(string)$c); return $c===''?$f:$c; }
+function wp_strip_all_tags($s){ return strip_tags((string)$s); }
 require $argv[1];
 
 $fail = 0;

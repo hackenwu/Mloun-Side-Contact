@@ -42,6 +42,7 @@ class Mlsc_Json_Sent extends Exception {
 function wp_send_json_success( $d = null ) { throw new Mlsc_Json_Sent( array( 'success' => true, 'data' => $d ) ); }
 function wp_send_json_error( $d = null ) { throw new Mlsc_Json_Sent( array( 'success' => false, 'data' => $d ) ); }
 
+function wp_strip_all_tags($s){ return strip_tags((string)$s); }
 require $argv[1];
 $fail = 0;
 function chk($n,$g,$w){ global $fail; $ok=((string)$g===(string)$w); printf("  [%s] %s\n",$ok?'PASS':'FAIL',$n); if(!$ok){echo "        got : ".var_export($g,true)."\n        want: ".var_export($w,true)."\n"; $fail++;} }

@@ -2,7 +2,7 @@
  * Mloun Side Contact - Frontend JavaScript
  *
  * @package Mloun_Side_Contact
- * @version 1.4.38
+ * @version 1.4.39
  */
 
 (function () {

@@ -1,17 +1,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mloun Side Contact 1.4.36\n"
+"Project-Id-Version: Mloun Side Contact 1.4.39\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone/\n"
-"POT-Creation-Date: 2026-11-11 21:49+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2026-10-25 00:00+0800\n"
+"PO-Revision-Date: 2026-10-25 00:00+0800\n"
+"Last-Translator: Mloun <sales@mloun.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone\n"
 
 #: mloun-side-contact.php
@@ -327,6 +327,14 @@ msgid "Optional. Replaces the channel icon with your own image."
 msgstr ""
 
 #: mloun-side-contact.php
+msgid "Image ALT Text"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Applies to the QR code and custom icon of this channel. Leave blank to use the ALT text set on the image in the media library; if that is empty too, the channel name is used."
+msgstr ""
+
+#: mloun-side-contact.php
 msgid "Show on"
 msgstr ""
 
@@ -448,6 +456,22 @@ msgstr ""
 
 #: mloun-side-contact.php
 msgid "Hide on Mobile"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Mobile Layout"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Bottom bar (default)"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Same as desktop side rail"
+msgstr ""
+
+#: mloun-side-contact.php
+msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
 msgstr ""
 
 #: mloun-side-contact.php
@@ -725,24 +749,3 @@ msgstr ""
 #: mloun-side-contact.php
 msgid "Reflects your unsaved settings. Save to publish."
 msgstr ""
-
-#: mloun-side-contact.php
-msgid "Mobile Layout"
-msgstr ""
-
-#: mloun-side-contact.php
-msgid "Bottom bar (default)"
-msgstr ""
-
-#: mloun-side-contact.php
-msgid "Same as desktop side rail"
-msgstr ""
-
-#: mloun-side-contact.php
-msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
-msgstr ""
-
-#: mloun-side-contact.php
-msgid "Live on your site · %d channel"
-msgid_plural "Live on your site · %d channels"
-msgstr[0] ""

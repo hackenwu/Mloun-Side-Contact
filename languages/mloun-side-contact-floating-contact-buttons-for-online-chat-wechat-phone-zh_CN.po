@@ -3,7 +3,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mloun Side Contact 1.4.36\n"
+"Project-Id-Version: Mloun Side Contact 1.4.39\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mloun-side-contact-floating-contact-buttons-for-online-chat-wechat-phone/\n"
 "POT-Creation-Date: 2026-10-25 00:00+0800\n"
 "PO-Revision-Date: 2026-10-25 00:00+0800\n"
@@ -329,6 +329,14 @@ msgid "Optional. Replaces the channel icon with your own image."
 msgstr "可选。用你自己的图片替换频道图标。"
 
 #: mloun-side-contact.php
+msgid "Image ALT Text"
+msgstr "图片 ALT 文字"
+
+#: mloun-side-contact.php
+msgid "Applies to the QR code and custom icon of this channel. Leave blank to use the ALT text set on the image in the media library; if that is empty too, the channel name is used."
+msgstr "适用于该频道的二维码与自定义图标。留空则使用媒体库中图片已设置的 ALT 文字；若那里也为空，则使用频道名称。"
+
+#: mloun-side-contact.php
 msgid "Show on"
 msgstr "显示于"
 
@@ -451,6 +459,22 @@ msgstr "垂直居中"
 #: mloun-side-contact.php
 msgid "Hide on Mobile"
 msgstr "移动端隐藏"
+
+#: mloun-side-contact.php
+msgid "Mobile Layout"
+msgstr "移动端布局"
+
+#: mloun-side-contact.php
+msgid "Bottom bar (default)"
+msgstr "底部横条（默认）"
+
+#: mloun-side-contact.php
+msgid "Same as desktop side rail"
+msgstr "与电脑端一样显示在侧边"
+
+#: mloun-side-contact.php
+msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
+msgstr "选择“与电脑端一样显示在侧边”后，手机端会保持侧边悬浮，完全跟随上方的电脑端位置、边距和样式设置。折叠 / 展开设置只对侧边布局生效——底部横条始终平铺显示。"
 
 #: mloun-side-contact.php
 msgid "Entrance Animation"
@@ -727,24 +751,3 @@ msgstr "预览设备"
 #: mloun-side-contact.php
 msgid "Reflects your unsaved settings. Save to publish."
 msgstr "显示的是未保存的设置，保存后才会正式生效。"
-
-#: mloun-side-contact.php
-msgid "Mobile Layout"
-msgstr "移动端布局"
-
-#: mloun-side-contact.php
-msgid "Bottom bar (default)"
-msgstr "底部横条（默认）"
-
-#: mloun-side-contact.php
-msgid "Same as desktop side rail"
-msgstr "与电脑端一样显示在侧边"
-
-#: mloun-side-contact.php
-msgid "Choose \"Same as desktop side rail\" to keep the phone widget on the side and follow the desktop position, offset and style settings above. The Fold / Unfold setting only applies to the side rail — the bottom bar is always laid out flat."
-msgstr "选择“与电脑端一样显示在侧边”后，手机端会保持侧边悬浮，完全跟随上方的电脑端位置、边距和样式设置。折叠 / 展开设置只对侧边布局生效——底部横条始终平铺显示。"
-
-#: mloun-side-contact.php
-msgid "Live on your site · %d channel"
-msgid_plural "Live on your site · %d channels"
-msgstr[0] "站点上已上线 %d 个渠道"

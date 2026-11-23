@@ -5,7 +5,7 @@
  * then keeps a live preview of the generated link so the URL can never be mistyped.
  *
  * @package Mloun_Side_Contact
- * @version 1.4.38
+ * @version 1.4.39
  */
 
 jQuery( document ).ready( function ( $ ) {

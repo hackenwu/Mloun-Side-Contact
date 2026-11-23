@@ -6,7 +6,8 @@
     python run-tests.py --quiet    # 只打印汇总
 
 测试套件在 ./tests/ 里，每个都是独立 PHP 脚本，接受插件主文件路径作为 argv[1]。
-PHP 不在 PATH 里时按常见安装位置查找，可用环境变量 MLSC_PHP 覆盖。
+PHP 不在 PATH 里，默认用 C:/Users/DELL/AppData/Local/Temp/php81/php.exe，
+可用环境变量 MLSC_PHP 覆盖。
 """
 
 import os
@@ -38,10 +39,12 @@ SUITES = [
     "fix9_test.php",
     "fix10_test.php",
     "mobile_layout_test.php",
+    "alt_test.php",
 ]
 
 PHP_CANDIDATES = [
     os.environ.get("MLSC_PHP", ""),
+    r"C:/Users/DELL/AppData/Local/Temp/php81/php.exe",
     r"C:/php/php.exe",
     r"C:/xampp/php/php.exe",
 ]

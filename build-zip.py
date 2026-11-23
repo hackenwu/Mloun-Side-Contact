@@ -71,10 +71,7 @@ def main() -> int:
         for path in sorted(here.rglob("*")):
             if not path.is_file():
                 continue
-            if ".svn" in path.parts or ".git" in path.parts or "__pycache__" in path.parts:
-                continue
-            # Dev-only content that belongs in the repo, not in the installable zip.
-            if "tests" in path.parts or path.name in {"README.md", ".gitignore"}:
+            if ".svn" in path.parts or "__pycache__" in path.parts:
                 continue
             if path.name in EXCLUDE_NAMES or path.name.endswith(EXCLUDE_SUFFIX):
                 continue

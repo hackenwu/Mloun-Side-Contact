@@ -30,6 +30,7 @@ function wp_nonce_field(){} function settings_fields(){} function admin_url(){ r
 function get_locale(){ return 'zh_CN'; } function absint($v){ return abs(intval($v)); }
 function load_plugin_textdomain(){} function is_admin(){ return true; } function remove_all_actions(){}
 function add_menu_page(){} function add_submenu_page(){} function register_setting(){}
+function wp_strip_all_tags($s){ return strip_tags((string)$s); }
 require $argv[1];
 $fail=0;
 function chk($n,$g,$w){ global $fail; $ok=((string)$g===(string)$w); printf("  [%s] %s\n",$ok?'PASS':'FAIL',$n); if(!$ok){echo "        got : ".var_export($g,true)."\n        want: ".var_export($w,true)."\n"; $fail++;} }

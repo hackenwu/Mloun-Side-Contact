@@ -4,7 +4,7 @@ Tags: floating contact, side contact, sticky contact, whatsapp chat, wechat cont
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.38
+Stable tag: 1.4.39
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,11 @@ Yes. Each WhatsApp and Telegram channel has its own prefilled message field. Vis
 6. Custom QR code/image on desktop
 
 == Changelog ==
+
+= 1.4.39 =
+* Fixed: the QR code image and the custom channel icon were printed with an empty alt attribute, so the ALT text set on the image in the media library never reached the page. Images now carry it, and both images are announced properly by screen readers and indexed by image search.
+* Added: an optional "Image ALT Text" field per channel (under Advanced), which overrides the value from the media library for that channel's QR code and custom icon. Leave it blank to keep using the media library ALT; if that is empty too, the channel name is used.
+* Note: no existing setting changes. Sites that never set an ALT anywhere keep a meaningful description instead of an empty attribute.
 
 = 1.4.38 =
 * Added: a "Mobile Layout" option. Phones keep the full-width bottom bar by default; choose "Same as desktop side rail" to keep the widget on the side and follow the desktop position, offset, size and style settings unchanged.
